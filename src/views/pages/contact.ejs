@@ -1,33 +1,14 @@
-<!DOCTYPE html>
-<html lang="nl">
+<marquee>contact page</marquee>
+<h1>
+    <%=title %>
+</h1>
+<hr>
+<p>
+    <%=message %>
+</p>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <title>Mijn eerste EJS applicatie</title>
-</head>
-
-<body>
-    <%- include("../partials/nav") %>
-
-        <marquee>contact page</marquee>
-        <h1>
-            <%=title %>
-        </h1>
-        <hr>
-        <p>
-            <%=message %>
-        </p>
-
-        <h3>Name: <%=person.firstname + " " + person.lastname %>
-        </h3>
-        <address>
-            Location: <%=person.location.city %>, <%=person.location.country %>
-        </address>
-
-</body>
-
-</html>
+<h3>Name: <%=person.firstname + " " + person.lastname %>
+</h3>
+<address>
+    Location: <%=person.location.city %>, <%=person.location.country %>
+</address>
