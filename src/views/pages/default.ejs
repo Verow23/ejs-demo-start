@@ -11,33 +11,24 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <% navItems.forEach(navigation=> { %>
-                <li><a href="<%=navigation.url%>">
-                        <%=navigation.label %>
-                    </a></li>
-
-                <%} ) %>
-        </ul>
-    </nav>
-    <h1>
-        <%=title %>
-    </h1>
-    <p>
-        <%=message %>
-    </p>
-    <hr>
-    <% if(team){ %>
-        <h3>Maak kennis met ons team:</h3>
-        <ul>
-            <% team.forEach(dino=>{ %>
-                <li>
-                    <%- dino %>
-                </li>
-                <% }); %>
-        </ul>
-        <% } %>
+    <%- include("../partials/nav") %>
+        <h1>
+            <%=title %>
+        </h1>
+        <p>
+            <%=message %>
+        </p>
+        <hr>
+        <% if(team){ %>
+            <h3>Maak kennis met ons team:</h3>
+            <ul>
+                <% team.forEach(dino=>{ %>
+                    <li>
+                        <%- dino %>
+                    </li>
+                    <% }); %>
+            </ul>
+            <% } %>
 </body>
 
 </html>

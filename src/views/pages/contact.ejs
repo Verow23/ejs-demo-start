@@ -11,30 +11,22 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <% navItems.forEach(navigation=> { %>
-                <li><a href="<%=navigation.url%>">
-                        <%=navigation.label %>
-                    </a></li>
+    <%- include("../partials/nav") %>
 
-                <%} ) %>
-        </ul>
-    </nav>
-    <marquee>contact page</marquee>
-    <h1>
-        <%=title %>
-    </h1>
-    <hr>
-    <p>
-        <%=message %>
-    </p>
+        <marquee>contact page</marquee>
+        <h1>
+            <%=title %>
+        </h1>
+        <hr>
+        <p>
+            <%=message %>
+        </p>
 
-    <h3>Name: <%=person.firstname + " " + person.lastname %>
-    </h3>
-    <address>
-        Location: <%=person.location.city %>, <%=person.location.country %>
-    </address>
+        <h3>Name: <%=person.firstname + " " + person.lastname %>
+        </h3>
+        <address>
+            Location: <%=person.location.city %>, <%=person.location.country %>
+        </address>
 
 </body>
 
